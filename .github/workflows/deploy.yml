@@ -17,9 +17,10 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script_stop: true
 
           script: |
-            cd /root/contact-us
+            cd /root/Contact-Us-Page
             git pull origin main
             npm install
             npm run build
