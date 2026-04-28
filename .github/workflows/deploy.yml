@@ -20,10 +20,19 @@ jobs:
           script_stop: true
 
           script: |
+            cd /root
+
+            if [ ! -d "Contact-Us-Page" ]; then
+              git clone https://github.com/Mehak-Jain913/Contact-Us-Page.git
+            fi
+
             cd /root/Contact-Us-Page
+
             git pull origin main
             npm install
             npm run build
+
             rm -rf /var/www/html/*
             cp -r build/* /var/www/html/
+
             systemctl restart nginx
