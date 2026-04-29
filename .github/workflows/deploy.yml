@@ -33,6 +33,6 @@ jobs:
             npm run build
 
             rm -rf /var/www/html/*
-            cp -r build/* /var/www/html/
+            cp -r dist/* /var/www/html/
 
             systemctl restart nginx
