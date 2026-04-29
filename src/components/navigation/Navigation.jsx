@@ -1,5 +1,4 @@
 import React from 'react';
-import './Navigation.module.css';
 export default function Navigation() {
     return (
         <nav className="container">
